@@ -957,19 +957,19 @@ int generateMTRandom(unsigned int s, int range)
 
 
 static const int64 nMinSubsidy = 1 * COIN;
-static const int CUTOFF_HEIGHT = 20160;	// Height at the end of 14 days
+static const int CUTOFF_HEIGHT = 5760;	// Height at the end of 1 day days
 // miner's coin base reward based on nBits
 int64 GetProofOfWorkReward(int nHeight, int64 nFees)
 {
-	int64 nSubsidy = 10000 * COIN;
+	int64 nSubsidy = 1000 * COIN;
 
 	if (nHeight ==1)
 	{
-		nSubsidy = 3240000100 * COIN; //Micryon : SCAM-revert reflects the real gigantic premine that has now been banned, see : https://bitcointalk.org/index.php?topic=595999.0
+		nSubsidy = 1000 * COIN; //Micryon : SCAM-revert reflects the real gigantic premine that has now been banned, see : https://bitcointalk.org/index.php?topic=595999.0
 	}
 	else if ((nHeight >1) && (nHeight <= 1000))
 	{
-		nSubsidy = 100 * COIN;
+		nSubsidy = 1000 * COIN;
 	}
 	else if(nHeight > 10080)
 	{
@@ -978,7 +978,7 @@ int64 GetProofOfWorkReward(int nHeight, int64 nFees)
 			return nMinSubsidy + nFees;
 		}
 		
-		nSubsidy = 5000 * COIN;
+		nSubsidy = 1000 * COIN;
 	}
 
     return nSubsidy + nFees;
