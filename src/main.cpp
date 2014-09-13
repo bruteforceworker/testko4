@@ -43,10 +43,10 @@ static CBigNum bnProofOfStakeLimitTestNet(~uint256(0) >> 20);
 
 unsigned int nStakeMinAge = 60 * 60 * 24;	// minimum age for coin age: 1d
 unsigned int nStakeMaxAge = 60 * 60 * 24 * 365 * 10;	// stake age of full weight: 10y
-unsigned int nStakeTargetSpacing = 60;			// 60 sec block spacing
+unsigned int nStakeTargetSpacing = 15;			// 15 sec block spacing
 
 int64 nChainStartTime = 1397664000; //Wed, 16 Apr 2014 16:00:00 GMT
-int nCoinbaseMaturity = 50;
+int nCoinbaseMaturity = 96; //veljavnost novih kovancev po enem dnevu
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
 CBigNum bnBestChainTrust = 0;
